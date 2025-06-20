@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'oshka_guru_qa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            'io.rest-assured:rest-assured:5.2.0',
+            'org.junit.jupiter:junit-jupiter:5.10.0'
+    )
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
