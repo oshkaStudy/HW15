@@ -11,7 +11,7 @@ public class ApiTests extends ApiTestBase{
     @Test
     @DisplayName("POST. Создание нового пользователя")
     @Tag("Позитивный")
-    void successfulUserCreation() {
+    void successfulUserCreationTest() {
 
         given()
                 .contentType(JSON)
@@ -35,7 +35,7 @@ public class ApiTests extends ApiTestBase{
     @Test
     @DisplayName("POST. Создание нового пользователя с пустым body")
     @Tag("Негативный")
-    void negativeUserCreationNoBody() {
+    void negativeUserCreationNoBodyTest() {
 
         given()
                 .header("x-api-key", xApiKey)
@@ -58,7 +58,7 @@ public class ApiTests extends ApiTestBase{
     @Test
     @DisplayName("POST. Создание нового пользователя с пустым job")
     @Tag("Негативный")
-    void negativeUserCreationNoJob() {
+    void negativeUserCreationNoJobTest() {
 
         given()
                 .header("x-api-key", xApiKey)
@@ -81,7 +81,7 @@ public class ApiTests extends ApiTestBase{
     @Test
     @DisplayName("PUT. Обновление данных пользователя")
     @Tag("Позитивный")
-    void successfulUserFullUpdate() {
+    void successfulUserFullUpdateTest() {
 
         given()
                 .contentType(JSON)
@@ -104,7 +104,7 @@ public class ApiTests extends ApiTestBase{
     @Test
     @DisplayName("PUT. Обновление данных пользователя - только имя")
     @Tag("Позитивный")
-    void successfulUserPutUpdateNameOnly() {
+    void successfulUserPutUpdateNameOnlyTest() {
 
         given()
                 .contentType(JSON)
@@ -127,7 +127,7 @@ public class ApiTests extends ApiTestBase{
     @Test
     @DisplayName("PATCH. Обновление данных пользователя")
     @Tag("Позитивный")
-    void successfulUserPatchUpdate() {
+    void successfulUserPatchUpdateTest() {
 
         given()
                 .contentType(JSON)
@@ -150,7 +150,7 @@ public class ApiTests extends ApiTestBase{
     @Test
     @DisplayName("DELETE. Удаление пользователя")
     @Tag("Позитивный")
-    void successfulUserDelete() {
+    void successfulUserDeleteTest() {
 
         given()
                 .contentType(JSON)
